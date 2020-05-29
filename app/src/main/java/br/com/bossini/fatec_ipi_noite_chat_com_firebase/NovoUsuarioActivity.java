@@ -3,6 +3,7 @@ package br.com.bossini.fatec_ipi_noite_chat_com_firebase;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -40,6 +41,7 @@ public class NovoUsuarioActivity extends AppCompatActivity {
             Toast.makeText(this,
                     getString(R.string.cadastro_falha),
                     Toast.LENGTH_SHORT).show();
+            Log.e("CADASTRO", erro.getMessage(), erro);
             finish();
         });
 

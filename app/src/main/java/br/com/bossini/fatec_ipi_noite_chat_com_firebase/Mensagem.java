@@ -18,6 +18,10 @@ class Mensagem implements Comparable <Mensagem> {
         this.texto = texto;
     }
 
+    public Mensagem (){
+
+    }
+
     public String getUsuario() {
         return usuario;
     }

@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 login,
                 senha
         ).addOnSuccessListener((result) -> {
+            startActivity(new Intent (this, ChatActivity.class));
 
         }).addOnFailureListener((error) -> {
             Toast.makeText(
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                     getString(R.string.login_falhou),
                     Toast.LENGTH_LONG)
             .show();
+            error.printStackTrace();
         });
 
     }
